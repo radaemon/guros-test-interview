@@ -6,7 +6,6 @@ const mongoose = require('mongoose');
 const hasMutation = require('./hasMutation');
 const MutationModel = require('./models/Mutation');
 
-const HOST = process.env.HOST || localhost;
 const PORT = process.env.PORT || 3000;
 const MONGO_DB = process.env.MONGO_DB;
 
@@ -62,5 +61,5 @@ app.get("/stats", (req, response) => {
 })
 
 app.listen(PORT, () => {
-    console.log(`App listening on ${HOST}:${PORT}`)
+    console.log(`App listening on port:${PORT}`)
 })
